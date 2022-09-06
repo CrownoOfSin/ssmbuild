@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="books">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="BookMapper" />
+              <option name="daoPackage" value="com.kuang.dao" />
+              <option name="daoPostfix" value="BookMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Books" />
+              <option name="modelPackage" value="" />
+              <option name="name" value="books" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="bookID" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="books" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="com.kuang.dao" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--configuration核心配置文件-->
+<mapper namespace="com.kuang.dao.LoginMapper">
+    <resultMap id="result" type="com.kuang.pojo.User">
+        <id column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_pass" property="userPass"/>
+    </resultMap>
+    <insert id="registerUser">
+        insert into ssmbuild.users(user_id,user_name,user_pass)
+        values (#{userId},#{userName},#{userPass})
+    </insert>
+    <select id="queryUserByName" resultMap="result">
+        select * from ssmbuild.users
+        where user_name = #{userName}
+        and user_pass = #{userPass}
+    </select>
+    <select id="queryAllUser" resultMap="result" >
+        select * from ssmbuild.users
+    </select>
+</mapper>

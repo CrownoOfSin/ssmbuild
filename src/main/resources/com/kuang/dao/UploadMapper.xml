@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--configuration核心配置文件-->
+<mapper namespace="com.kuang.dao.UploadMapper">
+    <resultMap id="result" type="com.kuang.pojo.Product">
+        <id column="file_id" property="fileId"/>
+        <result column="file_name" property="fileName"/>
+        <result column="file_path" property="filePath"/>
+    </resultMap>
+    <insert id="uploadFile">
+        insert into ssmbuild.upload(file_name,file_path)
+        values (#{fileName},#{filePath})
+    </insert>
+
+    <select id="queryAllFile" resultMap="result">
+        select * from ssmbuild.upload
+    </select>
+
+</mapper>

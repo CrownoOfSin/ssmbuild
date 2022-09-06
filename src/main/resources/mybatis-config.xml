@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!-- 配置驼峰命名规则 -->
+<!--        <setting name="mapUnderscoreToCamelCase" value="true"/>-->
+    </settings>
+
+    <!--配置数据源，交给spring去做-->
+    <typeAliases>
+        <package name="com.kuang.pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 默认是false 分页参数合理化 -->
+            <property name="reasonable" value="true"/>
+            <!--默认false，多数据源时使用-->
+            <property name="autoRuntimeDialect" value="flase"/>
+            <!--默认为false 为true时 当pagesize为0 查出所以结果-->
+            <property name="pageSizeZero" value="true"/>
+        </plugin>
+    </plugins>
+
+    <mappers>
+       <!-- <mapper resource="com/kuang/dao/BookMapper.xml"/>
+        <mapper resource="com/kuang/dao/LoginMapper.xml"/>-->
+    </mappers>
+
+</configuration>
